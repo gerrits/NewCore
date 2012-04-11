@@ -6,7 +6,7 @@ import java.awt.event.MouseEvent;
 
 //Game class
 public class Game extends Core {
-	PhysicsObject a,b; //Physics Objects
+	PhysicsObject a,b,c; //Physics Objects
 	
 	public static void main(String[] args) {
 		Game g = new Game();
@@ -15,8 +15,11 @@ public class Game extends Core {
 	
 	public void init() {
 		super.init(); // call Core's init()
+		
+		//Tests
 		a = (Square) new Square(15,15,30,30);
 		b = (Square) new Square(15,15,30,30);
+		c = (Circle) new Circle(1,50d,100d);
 		
 		//give a and b a little x velocity
 		a.setVelocityX(0.3d);
@@ -27,6 +30,7 @@ public class Game extends Core {
 	public void update(long timePassed) { //global update method
 		a.update(timePassed);
 		b.update(timePassed);
+		c.update(timePassed);
 	}
 
 	@Override 
@@ -34,6 +38,7 @@ public class Game extends Core {
 		g.fillRect(0, 0, s.getWidth(), s.getHeigth()); // Repaint Background
 		a.draw(g);
 		b.draw(g);
+		c.draw(g);
 		
 	}
 	
