@@ -1,5 +1,11 @@
 package game;
-
+/*
+ * TODO: Write Input Handler so you can do somethin like if(ih.keys[VK_UP] == true) { ...} in the update() loop
+ * instead of using the events.
+ * 
+ * TODO: Implement physics
+ * TODO: 
+ */
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
