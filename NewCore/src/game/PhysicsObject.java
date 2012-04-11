@@ -12,9 +12,13 @@ public abstract class PhysicsObject {
 	public abstract void draw(Graphics2D g);
 	
 	//TODO: This is where all the physics stuff should happen
-	public void update(long timePassed) {
-		setX(vx * timePassed);
-		setY(vy * timePassed);
+	public synchronized void update(long timePassed) {
+		vy = 9.81d * (time/1000d);
+		
+		time += timePassed;
+		System.out.println("time:" + time + "\n");
+		setX(getX() + (vx * timePassed));
+		setY(getY() + (vy * (time/1000d)));
 	}
 	
 	//Getters and Setters
@@ -41,6 +45,7 @@ public abstract class PhysicsObject {
 	//ugly :/
 	public abstract void setX(double x);
 	public abstract void setY(double y);
-	
+	public abstract double getX();
+	public abstract double getY();
 	
 }

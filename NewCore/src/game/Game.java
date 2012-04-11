@@ -30,6 +30,7 @@ public class Game extends Core {
 		//give a and b a little x velocity
 		a.setVelocityX(0.3d);
 		b.setVelocityX(0.5d);
+		c.setVelocityX(1d);
 	}
 
 	@Override
@@ -53,7 +54,10 @@ public class Game extends Core {
 		a.setY(10);
 		b.setX(10);
 		b.setY(10);
+		c.setY(10);
+		c.setX(150);
 		a.time = 0;
 		b.time = 0;
+		c.time = 0;
 	}
 }

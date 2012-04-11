@@ -69,6 +69,7 @@ public abstract class Core implements MouseListener, MouseMotionListener, KeyLis
 			g.dispose();
 			//call to update window content
 			s.update();
+			//s.getFrame().repaint();
 
 			try {
 				//sleep 3 millis

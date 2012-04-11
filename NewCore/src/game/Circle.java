@@ -15,7 +15,7 @@ public class Circle extends PhysicsObject {
 		this.y = y;
 	}
 	@Override
-	public void draw(Graphics2D g) {
+	public synchronized void draw(Graphics2D g) {
 		// TODO Auto-generated method stub
 		g.drawArc((int)x,(int) y,(int) radius,(int) radius, 0, 360);
 	}
@@ -31,6 +31,15 @@ public class Circle extends PhysicsObject {
 	public void setY(double y) {
 		// TODO Auto-generated method stub
 		this.y = y;
+	}
+	@Override
+	public double getX() {
+		return x;
+	}
+	@Override
+	public double getY() {
+		// TODO Auto-generated method stub
+		return y;
 	}
 
 }
