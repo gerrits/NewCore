@@ -1,5 +1,8 @@
 package game;
-
+/*
+ * Collision detection on circles is easy, just check if any object is nearer then the Circles radius
+ * but where to put it?
+ */
 import java.awt.Graphics2D;
 
 public class Circle extends PhysicsObject {
@@ -16,14 +19,7 @@ public class Circle extends PhysicsObject {
 		// TODO Auto-generated method stub
 		g.drawArc((int)x,(int) y,(int) radius,(int) radius, 0, 360);
 	}
-
-	@Override
-	public void update(long timePassed) {
-		// TODO Auto-generated method stub
-		x = getVelocityX() * timePassed;
-		y = getVelocityY() * timePassed;
-	}
-
+	
 	@Override
 	public void setX(double x) {
 		// TODO Auto-generated method stub

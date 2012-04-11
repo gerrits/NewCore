@@ -12,7 +12,10 @@ public abstract class PhysicsObject {
 	public abstract void draw(Graphics2D g);
 	
 	//TODO: This is where all the physics stuff should happen
-	public abstract void update(long timePassed);
+	public void update(long timePassed) {
+		setX(vx * timePassed);
+		setY(vy * timePassed);)
+	}
 	
 	//Getters and Setters
 	public double getVelocityX() {
