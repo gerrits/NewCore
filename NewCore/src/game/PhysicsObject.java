@@ -14,7 +14,7 @@ public abstract class PhysicsObject {
 	//TODO: This is where all the physics stuff should happen
 	public void update(long timePassed) {
 		setX(vx * timePassed);
-		setY(vy * timePassed);)
+		setY(vy * timePassed);''
 	}
 	
 	//Getters and Setters
