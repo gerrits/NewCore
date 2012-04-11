@@ -6,6 +6,7 @@ import java.awt.geom.*;
 public class Square extends PhysicsObject {
 	Rectangle2D.Double r; // should be inherited from PhysicsObject. Also, Rectangle2D does not support rotation
 						  // but it could be implemented manually
+	
 	static double accel = 15;
 	//CONSTRUCTOR
 	public Square(double x, double y, double width, double height) {
