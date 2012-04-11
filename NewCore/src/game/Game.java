@@ -4,12 +4,11 @@ package game;
  * instead of using the events.
  * 
  * TODO: Implement physics
- * TODO: 
+ * TODO: Fix bug: Framerate drops if mouse is not moved inside the Frame
  */
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
-
 //Game class
 public class Game extends Core {
 	PhysicsObject a,b,c; //Physics Objects
